@@ -18,6 +18,8 @@ and radar signal processing.
 | [Embedded validation bench](https://github.com/momo347t/embedded-validation-bench) | Portable C acquisition firmware, bounded COBS/CRC serial protocol, Python capture and fault-injection tests. Native firmware validation and an RP2040 hardware target; physical measurements remain to be recorded. |
 | [FPGA ITCH market-data decoder](https://github.com/momo347t/market-data-fpga) | SystemVerilog decoder for eight ITCH 5.0 payload types, ready/valid flow control, bounded event FIFO and malformed-frame diagnostics. Independent Python reference, directed/random simulation and reproducible synthesis. |
 | [Streaming Q1.15 FIR](https://github.com/momo347t/streaming-fir-q15) | 32-tap fixed-point filter with a time-shared MAC, signed saturation and backpressure. Bit-exact and cycle-exact Python scoreboard, operator/resource checks and implementation reports. |
+| [CW/FMCW radar](https://github.com/momo347t/cw-fmcw-radar) | Four-person KTH project: original MATLAB processing and recorded radar data, with a portable offline replay for CW speed and FMCW range estimation. Team credits, synthetic checks and measurement limits are documented. |
+| [Minimum spanning trees in C](https://github.com/momo347t/minimum-spanning-tree) | Three-person Phelma project implementing Prim and Kruskal, graph loading, edge lists and union-find. The portfolio version documents corrections and reproducible checks separately from the original academic snapshot. |
 
 [![Decoder checks](https://github.com/momo347t/market-data-fpga/actions/workflows/ci.yml/badge.svg)](https://github.com/momo347t/market-data-fpga/actions/workflows/ci.yml)
 [![FIR checks](https://github.com/momo347t/streaming-fir-q15/actions/workflows/ci.yml/badge.svg)](https://github.com/momo347t/streaming-fir-q15/actions/workflows/ci.yml)
@@ -27,8 +29,10 @@ Each project includes a runnable demo, an interface contract and reproducible
 checks. The FPGA projects have been simulated and synthesized, with reports
 tied to their RTL versions. The acquisition bench runs the actual C firmware
 core against deterministic virtual peripherals and supplies a Pico target.
-Physical board measurements are not yet recorded for these portfolio
-implementations; their READMEs distinguish those limits from native results.
+Physical board measurements are not yet recorded for the FPGA and acquisition
+bench portfolio implementations. The radar project replays recorded academic
+measurements; its documentation separates those recordings from synthetic tests
+and from any new hardware measurements.
 
 ## Current focus
 
